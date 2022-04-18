@@ -6,6 +6,7 @@ import com.lukaslechner.coroutineusecasesonandroid.mock.mockVersionFeaturesOreo
 import com.lukaslechner.coroutineusecasesonandroid.mock.mockVersionFeaturesPie
 import com.lukaslechner.coroutineusecasesonandroid.utils.MainCoroutineScopeRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert
 import org.junit.Rule

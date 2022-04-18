@@ -27,17 +27,17 @@ class TestClass {
     @Test
     fun `functionWithDelay should return 42`() = runBlockingTest {
 
-        val realTimeStart = System.currentTimeMillis()
-        val virtualTimeStart = currentTime
-
-        functionThatStartsNewCoroutine()
-        advanceTimeBy(1000)
-
-        val realTimeDuration = System.currentTimeMillis() - realTimeStart
-        val virtualTimeDuration = currentTime - virtualTimeStart
-
-        println("Test took $realTimeDuration real ms")
-        println("Test took $virtualTimeDuration virtual ms")
+//        val realTimeStart = System.currentTimeMillis()
+//        val virtualTimeStart = currentTime
+//
+//        functionThatStartsNewCoroutine()
+//        advanceTimeBy(1000)
+//
+//        val realTimeDuration = System.currentTimeMillis() - realTimeStart
+//        val virtualTimeDuration = currentTime - virtualTimeStart
+//
+//        println("Test took $realTimeDuration real ms")
+//        println("Test took $virtualTimeDuration virtual ms")
     }
 
 }

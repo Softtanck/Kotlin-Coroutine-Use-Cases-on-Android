@@ -64,7 +64,7 @@ class AndroidVersionRepositoryTest {
             viewModelScope.cancel()
 
             // continue coroutine execution after delay(1) in the fakeApi
-            advanceUntilIdle()
+//            advanceUntilIdle()
 
             assertEquals(true, fakeDatabase.insertedIntoDb)
         }

@@ -18,12 +18,7 @@ class RoomAndCoroutinesActivity : BaseActivity() {
 
     private val binding by lazy { ActivityQueryfromroomdatabaseBinding.inflate(layoutInflater) }
 
-    private val viewModel: RoomAndCoroutinesViewModel by viewModels {
-        ViewModelFactory(
-            mockApi(),
-            AndroidVersionDatabase.getInstance(applicationContext).androidVersionDao()
-        )
-    }
+    private val viewModel: RoomAndCoroutinesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

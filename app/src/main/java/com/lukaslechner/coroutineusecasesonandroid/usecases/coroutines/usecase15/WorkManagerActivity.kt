@@ -11,9 +11,7 @@ class WorkManagerActivity : BaseActivity() {
     override fun getToolbarTitle() = useCase15Description
 
     private val binding by lazy { ActivityWorkmangerBinding.inflate(layoutInflater) }
-    private val viewModel: WorkManagerViewModel by viewModels {
-        ViewModelFactory(this)
-    }
+    private val viewModel: WorkManagerViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

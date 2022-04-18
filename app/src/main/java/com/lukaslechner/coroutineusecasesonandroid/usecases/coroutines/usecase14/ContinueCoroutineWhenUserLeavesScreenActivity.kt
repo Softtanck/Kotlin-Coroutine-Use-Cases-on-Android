@@ -3,7 +3,6 @@ package com.lukaslechner.coroutineusecasesonandroid.usecases.coroutines.usecase1
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.lukaslechner.coroutineusecasesonandroid.CoroutineUsecasesOnAndroidApplication
 import com.lukaslechner.coroutineusecasesonandroid.R
 import com.lukaslechner.coroutineusecasesonandroid.base.BaseActivity
 import com.lukaslechner.coroutineusecasesonandroid.base.useCase14Description
@@ -19,9 +18,7 @@ class ContinueCoroutineWhenUserLeavesScreenActivity : BaseActivity() {
 
     private val binding by lazy { ActivityQueryfromroomdatabaseBinding.inflate(layoutInflater) }
 
-    private val viewModel: ContinueCoroutineWhenUserLeavesScreenViewModel by viewModels {
-        ViewModelFactory((application as CoroutineUsecasesOnAndroidApplication).androidVersionRepository)
-    }
+    private val viewModel: ContinueCoroutineWhenUserLeavesScreenViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,9 +81,11 @@ class ContinueCoroutineWhenUserLeavesScreenActivity : BaseActivity() {
 
         val readableVersions = uiState.recentVersions.map { "API ${it.apiLevel}: ${it.name}" }
         textViewResult.text = fromHtml(
-            "<b>Recent Android Versions [from ${uiState.dataSource.name}]</b><br>${readableVersions.joinToString(
-                separator = "<br>"
-            )}"
+            "<b>Recent Android Versions [from ${uiState.dataSource.name}]</b><br>${
+                readableVersions.joinToString(
+                    separator = "<br>"
+                )
+            }"
         )
     }
 

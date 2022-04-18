@@ -4,6 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.lukaslechner.coroutineusecasesonandroid.mock.mockAndroidVersions
 import com.lukaslechner.coroutineusecasesonandroid.utils.MainCoroutineScopeRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert
 import org.junit.Rule
